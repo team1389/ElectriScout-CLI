@@ -1,0 +1,8 @@
+Match Number		PRACTICE 1
+Auto Cubes - Switch	3
+Auto Cubes - Scale	2
+Baseline?		YES
+TeleOp Cubes - Switch	1
+TeleOp Cubes - Scale	7
+Climb?			YES
+

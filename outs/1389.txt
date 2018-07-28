@@ -1,0 +1,48 @@
+Match Number		PRACTICE
+Auto Cubes - Switch	3
+Auto Cubes - Scale	2
+Baseline?		1
+TeleOp Cubes - Switch	1
+TeleOp Cubes - Scale	1
+Climb?			1
+
+Match Number		PRACTICE 2
+Auto Cubes - Switch	3
+Auto Cubes - Scale	1
+Baseline?		YES
+TeleOp Cubes - Switch	3
+TeleOp Cubes - Scale	1
+Climb?			YES
+
+Match Number		PRACTICE 10
+Auto Cubes - Switch	1
+Auto Cubes - Scale	1
+Baseline?		YES
+TeleOp Cubes - Switch	5
+TeleOp Cubes - Scale	2
+Climb?			YES
+
+Match Number		10
+Auto Cubes - Switch	4
+Auto Cubes - Scale	1
+Baseline?		y
+TeleOp Cubes - Switch	5
+TeleOp Cubes - Scale	0
+Climb?			y
+
+Match Number		PRACTICE 13
+Auto Cubes - Switch	1
+Auto Cubes - Scale	0
+Baseline?		YES
+TeleOp Cubes - Switch	4
+TeleOp Cubes - Scale	0
+Climb?			YES
+
+Match Number		QUAL 1
+Auto Cubes - Switch	0
+Auto Cubes - Scale	0
+Baseline?		YES
+TeleOp Cubes - Switch	3
+TeleOp Cubes - Scale	0
+Climb?			YES
+
