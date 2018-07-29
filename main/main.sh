@@ -24,7 +24,6 @@ n: new match		e: edit old matches 		i: team info		q: quit ElectriScout"
 
 echo "
 "
->>>>>>> master
 
 echo "Select your option:"
 read openingop
@@ -47,20 +46,20 @@ elif [ "$openingop" = "e" ]
 then 
 	echo "Enter team number to find data on:"
 	read teamfind
-<<<<<<< misc-fixes
+
 	echo "Searching..."
 	sleep 3s
 	find $scriptdir/../outs/"$teamfind".txt
 	nano $scriptdir/../outs/"$teamfind".txt 
 	clear
 	exec $scriptdir/main.sh
-=======
+
 	echo "Searching"
 	wait 3s
 	find /home/ElectriScout-CLI-master/outs/"$teamfind".txt && nano /home/electriscout-development/outs/"$teamfind".txt 
 	clear
 	exec /home/ElectriScout-CLI-master/main/main.sh
->>>>>>> master
+
 
 #Use a basic FIND command to find the team in question
 
