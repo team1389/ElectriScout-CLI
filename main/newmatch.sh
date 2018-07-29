@@ -80,7 +80,7 @@ Baseline?		$basecheck
 TeleOp Cubes - Switch	$teleswitch
 TeleOp Cubes - Scale	$telescale
 Climb?			$climbcheck
-" >> /home/electriscout-development/outs/"$teamnum".txt
+" >> /home/ElectriScout-CLI-master/outs/"$teamnum".txt
 
 clear
-exec /home/electriscout-development/main/main.sh
+exec /home/ElectriScout-CLI-master/main/main.sh
