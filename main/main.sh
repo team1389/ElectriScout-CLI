@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#Get script directory
+scriptdir=$(dirname $0)
+
 #Clear the Console
 
 clear
@@ -27,8 +30,8 @@ read openingop
 if [ "$openingop" = "n" ] 
 then 
 	echo "Opening new match"
-	wait 2s
-	exec /home/electriscout-development/main/newmatch.sh
+	sleep 2s
+	exec $scriptdir/newmatch.sh
 
 #Use a basic FIND command to find the team in question
  
@@ -37,10 +40,11 @@ then
 	echo "Enter Team Number to Find Data On"
 	read teamfind
 	echo "Searching"
-	wait 3s
-	find /home/electriscout-development/outs/"$teamfind".txt && nano /home/electriscout-development/outs/"$teamfind".txt 
+	sleep 3s
+	find $scriptdir/../outs/"$teamfind".txt
+	nano $scriptdir/../outs/"$teamfind".txt 
 	clear
-	exec /home/electriscout-development/main/main.sh
+	exec $scriptdir/main.sh
 
 #Use a basic FIND command to find the team in question
 
@@ -48,12 +52,12 @@ elif [ "$openingop" = "i" ]
 then 
 	echo "Enter Team Number To Search"
 	read teamnumsearch
-	find /home/electriscout-development/outs/"$teamnumsearch".txt
-	wait 3s
+	find $scriptdir/../outs/"$teamnumsearch".txt
+	sleep 3s
 	echo "Catalogging"
-	nano /home/electriscout-development/outs/"$teamnumsearch".txt
+	nano $scriptdir/../outs/"$teamnumsearch".txt
 	clear
-	exec /home/electriscout-development/main/main.sh
+	exec $scriptdir/main.sh
 
 #Clear and Exit
 elif [ "$openiningop" = "q" ]

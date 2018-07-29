@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#Get script directory
+scriptdir=$(dirname $0)
+
 #Clear the Console
 clear
 
@@ -82,7 +85,7 @@ Baseline?		$basecheck
 TeleOp Cubes - Switch	$teleswitch
 TeleOp Cubes - Scale	$telescale
 Climb?			$climbcheck
-" >> /home/electriscout-development/outs/"$teamnum".txt
+" >> $scriptdir/../outs/"$teamnum".txt
 
 clear
-exec /home/electriscout-development/main/main.sh
+exec $scriptdir/main.sh
