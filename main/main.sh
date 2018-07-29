@@ -1,3 +1,5 @@
+#!/bin/sh
+
 #Clear the Console
 
 clear
