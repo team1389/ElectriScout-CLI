@@ -11,70 +11,58 @@ clear
 echo "WELCOME! THIS IS THE MAIN SCOUTING FORM USED BY TEAM 1389 DURING EVENTS!
 PLEASE FILL OUT ALL FIELDS TO THE BEST OF YOUR ABILITY. DATA VALIDATION IS IN USE"
 
-echo " _________________________________________________________________________"
+echo "_________________________________________________________________________"
+echo ""
 
-echo "Enter Team Number"
+echo "Enter team number:"
 read teamnum
 
-echo "your team is $teamnum"
-
 #Enter Match Number
-echo "Enter Match Number"
+echo "Enter match number:"
 read matchnum
 
-echo "Team = $teamnum ---- Match = $matchnum"
-
 #Print AUTO
-echo ""
+echo "______________________________________________________________"
 echo "Autonomous Period - From starting bell to 30 seconds in"
-echo "
-______________________________________________________________"
-
 echo ""
 
 #Enter Switch Auto
-echo "Enter number of cubes on the switch in auto"
+echo "Enter number of cubes on the switch in auto:"
 read autoswitch
 
-echo ""
-
 # Enter Scale Auto
-echo "Enter number of cubes on the scale in auto"
+echo "Enter number of cubes on the scale in auto:"
 read autoscale
 
 # Did The Team Cross the Baseline
-echo "Cross Baseline? (y/n)"
+echo "Did $teamnum cross the baseline? (y/n):"
 read basecheck
 
-echo "
-_____________________________________________________________"
-
+# Print TELEOP
+echo "_____________________________________________________________"
+echo "TeleOp - From 30s --> End of match"
 echo ""
 
-# Print TELEOP
-echo "TeleOperated Period - From 30s --> Endgame"
-
 #Enter Switch Tele
-echo "Enter number of cubes on the switch in teleop" 
+echo "Enter number of cubes on the switch in TeleOp:" 
 read teleswitch
 
 #Enter Scale Tele
-echo "Enter number of cubes on the scale in tele" 
+echo "Enter number of cubes on the scale in TeleOp:"
 read telescale
 
-echo "
-_____________________________________________________________"
+# Print ENDGAME
+echo "_____________________________________________________________"
+echo "Endgame - Last 30 Seconds (You will hear a horn)"
 echo ""
 
-# Print ENDGAME
-echo "Endgame - Last 30 Seconds (You will hear a horn)"
-
 # Check for Climb
-echo "Did $teamnum climb? (y/n)" 
+echo "Did $teamnum climb? (y/n):" 
 read climbcheck
 
 # Thank the Scout
-echo "THANK YOU! YOUR RESPONSE HAS BEEN RECORDED"
+echo ""
+echo "THANK YOU! YOUR RESPONSE HAS BEEN RECORDED."
 
 sleep 2s
 
