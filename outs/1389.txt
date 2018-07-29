@@ -46,3 +46,11 @@ TeleOp Cubes - Switch	3
 TeleOp Cubes - Scale	0
 Climb?			YES
 
+Match Number		lajd
+Auto Cubes - Switch	adkl
+Auto Cubes - Scale	asdlkjf
+Baseline?		aklsdjf
+TeleOp Cubes - Switch	ak;ldsjf
+TeleOp Cubes - Scale	akdsjf
+Climb?			ka;dj
+
