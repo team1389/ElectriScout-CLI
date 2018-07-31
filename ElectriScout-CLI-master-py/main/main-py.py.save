@@ -1,0 +1,7 @@
+print 2+2
+
+print ("_________________________")
+
+entrydecision = input()
+
+print(entrydecision)
