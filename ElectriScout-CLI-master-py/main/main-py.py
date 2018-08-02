@@ -1,7 +1,11 @@
 import os
+import curses
+
 
 
 os.system('clear')
+
+
 
 print("Welcome to ElectriScout!!! Please keep in mind this beta software, so any inquiries should be directed towards the CHS Discord or the FRC Discord")
 print("n: new match 	i: team info 	e: edit old matches 	q: exit")
@@ -26,3 +30,5 @@ else:
 	print ("Invalid Option")
 	os.system('sleep 2s')
 	os.system('python main-py.py')
+
+
