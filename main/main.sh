@@ -15,7 +15,7 @@ echo "__________________________________________________________________________
 echo ""
 echo "n: new match		e: edit old matches 		q: exit electriscout 		i: team info"
 echo ""
-<<<<<<< HEAD
+
 echo "
 _____________________________________________________________________________________________"
 
@@ -25,8 +25,6 @@ n: new match		e: edit old matches 		i: team info		q: quit ElectriScout"
 
 echo "
 "
-=======
->>>>>>> 17c1ac9a33f48c5aa06b505bca8a5a90e99de988
 
 echo "Select your option:"
 read openingop
@@ -45,26 +43,20 @@ elif [ "$openingop" = "e" ]
 then 
 	echo "Enter team number to find data on:"
 	read teamfind
-<<<<<<< HEAD
 
-=======
->>>>>>> 17c1ac9a33f48c5aa06b505bca8a5a90e99de988
-	echo "Searching..."
+echo "Searching..."
 	sleep 3s
-	find $scriptdir/../outs/"$teamfind".txt
-	nano $scriptdir/../outs/"$teamfind".txt 
+	find /home/ES/outs/"$teamfind".txt
+	nano /home/ES/outs/"$teamfind".txt 
 	clear
 	exec $scriptdir/main.sh
-<<<<<<< HEAD
 
 	echo "Searching"
 	wait 3s
 	find /home/ElectriScout-CLI-master/outs/"$teamfind".txt && nano /home/electriscout-development/outs/"$teamfind".txt 
 	clear
-	exec /home/ElectriScout-CLI-master/main/main.sh
+	exec $scriptdir/..main/main.sh
 
-=======
->>>>>>> 17c1ac9a33f48c5aa06b505bca8a5a90e99de988
 
 #Use a basic FIND command to find the team in question
 
@@ -74,7 +66,7 @@ then
 	read teamnumsearch
 	find $scriptdir/../outs/"$teamnumsearch".txt
 	sleep 3s
-	echo "Cataloguing..."
+	echo "Catalogging..."
 	nano $scriptdir/../outs/"$teamnumsearch".txt
 	clear
 	exec $scriptdir/main.sh
