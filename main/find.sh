@@ -25,57 +25,41 @@ echo "Scale in Teleop - 4"
 echo "Climbing - 5"
 echo "Match - 6"
 echo "Baseline - 7"
+echo "_______________________________________________"
 
 read search
 
-if ["$search" = "1"]
-then
-
+clear
 echo "Finding"
 sleep 1s
-cat /home/ES/outs/$teamname.txt | grep 'Auto Cubes - Switch' 
+
+if ["$search" = "1"]
+  then  
+  cat /home/ES/outs/$teamname.txt | grep 'Auto Cubes - Switch' 
 
 elif ["$search" = "2"]
-then
-
-echo "Finding"
-sleep 1s
-cat /home/ES/outs/$teamname.txt | grep 'Auto Cubes - Scale'
+  then
+  cat /home/ES/outs/$teamname.txt | grep 'Auto Cubes - Scale'
 
 elif ["$search" = "3"]
-then
-
-echo "Finding"
-sleep 1s
-cat /home/ES/outs/$teamname.txt | grep 'TeleOp Cubes - Switch'
+  then
+  cat /home/ES/outs/$teamname.txt | grep 'TeleOp Cubes - Switch'
 
 elif ["$search" = "4"]
-then
-
-echo "Finding"
-sleep 1s
-cat /home/ES/outs/$teamname.txt | grep 'TeleOp Cubes - Scale'
+  then
+  cat /home/ES/outs/$teamname.txt | grep 'TeleOp Cubes - Scale'
 
 elif ["$search" = "5"]
-then
-
-echo "Finding"
-sleep 1s
-cat /home/ES/outs/$teamname.txt | grep 'Climb?'
+  then
+  cat /home/ES/outs/$teamname.txt | grep 'Climb?'
 
 elif ["$search" = "6"]
-then
-
-echo "Finding"
-sleep 1s
-cat /home/ES/outs/$teamname.txt | grep "Match Number"
+  then
+  cat /home/ES/outs/$teamname.txt | grep "Match Number"
 
 elif ["$search" = "7"]
-then
-
-echo "Finding"
-sleep 1s
-cat /home/ES/outs/$teamname.txt | grep "Baseline?"
+  then
+  cat /home/ES/outs/$teamname.txt | grep "Baseline?"
 
 
 fi
