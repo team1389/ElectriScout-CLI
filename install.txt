@@ -1,0 +1,15 @@
+Installing ElectriScout
+
+1. install git. sudo apt-get install git 
+2. cd /home && mkdir ES                            
+3. cd ES
+4. git init
+5. git config --global user.name "Your Name"
+6. git config --global user.email johndoe@example.com
+7. git pull https://www.github.com/team1389/electriscout-cli.git
+
+NOW, YOU SHOULD HAVE 3 NEW FILES/FOLDERS: electriscout-cli-master-py    main    outs    README.md
+
+
+
+

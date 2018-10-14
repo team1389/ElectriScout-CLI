@@ -43,6 +43,7 @@ elif [ "$openingop" = "e" ]
 then 
 	echo "Enter team number to find data on:"
 	read teamfind
+	export teamfind
 
 echo "Searching..."
 	sleep 3s
