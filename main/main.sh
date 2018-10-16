@@ -13,21 +13,17 @@ echo "Please note this is beta software, so if you have any questions, comments,
 Additionally, you can email ecbcat20@icloud.com or emmetryan7@gmail.com"
 echo "_____________________________________________________________________________________________"
 echo ""
-echo "n: new match		e: edit old matches 		q: exit electriscout 		i: team info"
+echo "n: New Match		i: Advanced Team Info 		q: Quit ElectriScout"
 echo ""
 
 echo "
 _____________________________________________________________________________________________"
 
 echo "
-
-n: new match		e: edit old matches 		i: team info		q: quit ElectriScout"
-
-echo "
 "
 
-echo "Select your option:"
-read openingop
+read -n 1 -p "Input Selection: " "openingop" && echo "
+"
 
 #Open the newmatch.sh script stored in the main folder
 
@@ -38,44 +34,14 @@ then
 	exec $scriptdir/newmatch.sh
 
 #Use a basic FIND command to find the team in question
- 
-elif [ "$openingop" = "e" ]
-then 
-	echo "Enter team number to find data on:"
-	read teamfind
-	export teamfind
-
-echo "Searching..."
-	sleep 3s
-	find /home/ES/outs/"$teamfind".txt
-	nano /home/ES/outs/"$teamfind".txt 
-	clear
-	exec $scriptdir/main.sh
-
-	echo "Searching"
-	wait 3s
-	find /home/ElectriScout-CLI-master/outs/"$teamfind".txt && nano /home/electriscout-development/outs/"$teamfind".txt 
-	clear
-	exec $scriptdir/..main/main.sh
-
-
-#Use a basic FIND command to find the team in question
 
 elif [ "$openingop" = "i" ]
 then 
-	echo "Enter team number to search:"
-	read teamnumsearch
-	find $scriptdir/../outs/"$teamnumsearch".txt
-	sleep 3s
-	echo "Catalogging..."
-	nano $scriptdir/../outs/"$teamnumsearch".txt
-	clear
-	exec $scriptdir/main.sh
+	exec $scriptdir/find.sh
 
-#Clear and Exit
 elif [ "$openiningop" = "q" ]
 then
 	clear
 	exit
-	
+	clear
 fi

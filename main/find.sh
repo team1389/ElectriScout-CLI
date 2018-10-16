@@ -1,9 +1,9 @@
 clear
 
 echo "Enter team name: "
-echo "_______________________________________________________________________"
-
 read teamname
+
+echo "_______________________________________________________________________"
 
 scriptdir=$(dirname $0)
 
@@ -27,39 +27,52 @@ echo "Match - 6"
 echo "Baseline - 7"
 echo "_______________________________________________"
 
-read search
+read -n 1 -p "Input Selection: " "search" && echo "
+"
 
-clear
-echo "Finding"
-sleep 1s
+#Find data
 
-if ["$search" = "1"]
-  then  
-  cat /home/ES/outs/$teamname.txt | grep 'Auto Cubes - Switch' 
-
-elif ["$search" = "2"]
+if [ "$search" = "1" ]
   then
-  cat /home/ES/outs/$teamname.txt | grep 'Auto Cubes - Scale'
+  sudo cat /home/ES/outs/$teamname.txt | grep 'Auto Cubes - Switch' > $scriptdir/../outs/dataout.txt
+  gedit $scriptdir/../outs/dataout.txt
+  exec $scriptdir/main.sh
 
-elif ["$search" = "3"]
+elif [ "$search" = "2" ]
   then
-  cat /home/ES/outs/$teamname.txt | grep 'TeleOp Cubes - Switch'
+  cat /home/ES/outs/$teamname.txt | grep 'Auto Cubes - Scale' > $scriptdir/../outs/dataout.txt
+  gedit $scriptdir/../outs/dataout.txt
+  exec $scriptdir/main.sh
 
-elif ["$search" = "4"]
+elif [ "$search" = "3" ]
   then
-  cat /home/ES/outs/$teamname.txt | grep 'TeleOp Cubes - Scale'
+  cat /home/ES/outs/$teamname.txt | grep 'TeleOp Cubes - Switch' > $scriptdir/../outs/dataout.txt
+  gedit $scriptdir/../outs/dataout.txt
+ exec $scriptdir/main.sh
 
-elif ["$search" = "5"]
+elif [ "$search" = "4" ]
   then
-  cat /home/ES/outs/$teamname.txt | grep 'Climb?'
+  cat /home/ES/outs/$teamname.txt | grep 'TeleOp Cubes - Scale' > $scriptdir/../outs/dataout.txt
+  gedit $scriptdir/../outs/dataout.txt
+ exec $scriptdir/main.sh
 
-elif ["$search" = "6"]
+elif [ "$search" = "5" ]
   then
-  cat /home/ES/outs/$teamname.txt | grep "Match Number"
+  cat /home/ES/outs/$teamname.txt | grep 'Climb?' > $scriptdir/../outs/dataout.txt
+  gedit $scriptdir/../outs/dataout.txt
+  exec $scriptdir/main.sh
 
-elif ["$search" = "7"]
+elif [ "$search" = "6" ]
   then
-  cat /home/ES/outs/$teamname.txt | grep "Baseline?"
+  cat /home/ES/outs/$teamname.txt | grep "Match Number" > $scriptdir/../outs/dataout.txt
+  gedit $scriptdir/../outs/dataout.txt
+  exec $scriptdir/main.sh
+
+elif [ "$search" = "7" ]
+  then
+  cat /home/ES/outs/$teamname.txt | grep "Baseline?" > $scriptdir/../outs/dataout.txt
+  gedit $scriptdir/../outs/dataout.txt
+  exec $scriptdir/main.sh
 
 
 fi
