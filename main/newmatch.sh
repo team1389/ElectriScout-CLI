@@ -66,14 +66,9 @@ echo "THANK YOU! YOUR RESPONSE HAS BEEN RECORDED."
 
 sleep 2s
 
-echo "Match Number		$matchnum
-Auto Cubes - Switch	$autoswitch
-Auto Cubes - Scale	$autoscale
-Baseline?		$basecheck
-TeleOp Cubes - Switch	$teleswitch
-TeleOp Cubes - Scale	$telescale
-Climb?			$climbcheck
-" >> $scriptdir/../outs/"$teamnum".txt
+#please fix Tyrov
+
+sudo echo "Match Number	"$matchnum" Auto Cubes - Switch	"$autoswitch" Auto Cubes - Scale	"$autoscale"  Baseline?		"$basecheck" TeleOp Cubes - Switch	"$teleswitch" TeleOp Cubes - Scale	"$telescale" Climb?			"$climbcheck" "  >> /home/outs/$teamnum.txt
 
 clear
 exec $scriptdir/main.sh
