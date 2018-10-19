@@ -35,18 +35,18 @@ read -n 1 -p "Input Selection: " "search" && echo "
 if [ "$search" = "1" ]
   then
   sudo cat /home/ES/outs/$teamname.txt | grep 'Auto Cubes - Switch' > $scriptdir/../outs/dataout.txt
-  gedit $scriptdir/../outs/dataout.txt
+  sudo gedit $scriptdir/../outs/dataout.txt
   exec $scriptdir/main.sh
 
 elif [ "$search" = "2" ]
   then
-  cat /home/ES/outs/$teamname.txt | grep 'Auto Cubes - Scale' > $scriptdir/../outs/dataout.txt
-  gedit $scriptdir/../outs/dataout.txt
+  sudo cat /home/ES/outs/$teamname.txt | grep 'Auto Cubes - Scale' > $scriptdir/../outs/dataout.txt
+  sudo gedit $scriptdir/../outs/dataout.txt
   exec $scriptdir/main.sh
 
 elif [ "$search" = "3" ]
   then
-  cat /home/ES/outs/$teamname.txt | grep 'TeleOp Cubes - Switch' > $scriptdir/../outs/dataout.txt
+  cat /home/ES/outs/$teamname.txt | grep 'TeleOp Cubes - Switch' > $scriptdir/../outs/	dataout.txt
   gedit $scriptdir/../outs/dataout.txt
  exec $scriptdir/main.sh
 
