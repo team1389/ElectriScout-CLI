@@ -18,38 +18,62 @@ echo "Enter team number:"
 read teamnum
 
 #Enter Match Number
-echo "Enter match number:"
-read matchnum
+echo "Enter match type (all caps pls): "
+read matchtype
 
-#Print AUTO
+#Print SANDSTORM
 echo "______________________________________________________________"
-echo "Autonomous Period - From starting bell to 30 seconds in"
+echo "Sandstorm Period - From starting bell to 15 seconds in"
 echo ""
 
-#Enter Switch Auto
-echo "Enter number of cubes on the switch in auto:"
-read autoswitch
+#Enter Cargo Ship Hatch Placement Sandstorm Accuracy
+echo "Enter Accuracy of Hatch Placement - CARGO SHIP (LOW - MID - HIGH): "
+read sandCargoH
 
-# Enter Scale Auto
-echo "Enter number of cubes on the scale in auto:"
-read autoscale
+# Enter Cargo Ship Cargo Placement Accuracy
+echo "Enter Accuracy of Cargo Placement - CARGO SHIP (LOW - MID - HIGH): "
+read sandCargoC
 
-# Did The Team Cross the Baseline
-echo "Did $teamnum cross the baseline? (y/n):"
-read basecheck
+# Enter Rocket Hatch Placement Accuracy
+echo "Enter Accuracy of Hatch Placement - ROCKET (LOW - MID - HIGH): "
+read sandHatchR
+
+# Enter Rocket Cargo Placement Accuracy
+echo "Enter Accuracy of Cargo Placement - ROCKET (LOW - MID - HIGH): "
+read sandCargoR
+
+# From Which HAB Level did the Team Descend?
+echo "Which Level of the HAB did $teamnum descend from? (1-2): "
+read descendCheck
 
 # Print TELEOP
 echo "_____________________________________________________________"
-echo "TeleOp - From 30s --> End of match"
+echo "TeleOp - From 15s --> End of match"
 echo ""
 
-#Enter Switch Tele
-echo "Enter number of cubes on the switch in TeleOp:" 
-read teleswitch
+#Enter Hatch Panels on Cargo Ship
+echo "Enter Number of Hatch Panels on the Cargo Ship in TeleOp: " 
+read teleCargoH
 
-#Enter Scale Tele
-echo "Enter number of cubes on the scale in TeleOp:"
-read telescale
+#Enter Cargo in Cargo Ship
+echo "Enter Number of Cargo in the Cargo Ship in TeleOp: "
+read teleCargoC
+
+# Enter Rocket Hatch Panels
+echo "Enter Number of Hatch Panels on the Rocket in TeleOp: "
+read teleHatchR
+
+# Enter Rocket Cargo
+echo "Enter Number of Cargo on the Rocket in TeleOp: "
+read teleCargoR
+
+# Enter Highest Rocket Hatch
+echo "Enter Highest Rocket Hatch (0 - 1 - 2 - 3): "
+read hatchLevelR
+
+# Enter Highest Rocket Cargo
+echo "Enter Highest Rocket Cargo (0 - 1 - 2 - 3): "
+read cargoLevelR
 
 # Print ENDGAME
 echo "_____________________________________________________________"
@@ -57,8 +81,12 @@ echo "Endgame - Last 30 Seconds (You will hear a horn)"
 echo ""
 
 # Check for Climb
-echo "Did $teamnum climb? (y/n):" 
-read climbcheck
+echo "To Which HAB Level Did $teamnum Climb? (1 - 2 - 3): " 
+read climbCheck
+
+# Did Robot Die
+echo "Did $teamnum Die at Any Point in the Match? (YS, YT, NO, YE): "
+read deathCheck
 
 # Thank the Scout
 echo ""
@@ -67,13 +95,22 @@ echo "THANK YOU! YOUR RESPONSE HAS BEEN RECORDED."
 sleep 2s
 
 
-echo "Match Number		'$matchnum' 
-Auto Cubes - Switch	'$autoswitch' 
-Auto Cubes - Scale	'$autoscale
-Baseline?		'$basecheck' 
-TeleOp Cubes - Switch	'$teleswitch' 
-TeleOp Cubes - Scale	'$telescale'
-Climb?			'$climbcheck' " | sudo tee -a $scriptdir/../outs/"$teamnum".txt
+echo 
+"Match Type			'$matchtype' 
+Sand Hatch CS		    	'$sandCargoH' 
+Sand Cargo CS		   	'$sandCargoC'
+Sand Hatch Rocket		'$sandHatchR' 
+Sand Cargo Rocket		'$sandCargoR' 
+HAB Descent Level		'$descendCheck'
+Tele Hatch CS			'$teleCargoH'
+Tele Cargo CS			'$teleCargoC'
+Tele Hatch Rocket		'$teleHatchR'
+Tele Cargo Rocket		'$teleCargoR'
+Highest Rocket Hatch		'$hatchLevelR'
+Highest Rocket Cargo		'$cargoLevelR'	
+HAB Climb Level			'$climbCheck'
+$teamnum Died?			'$deathCheck' | sudo tee -a $scriptdir/../outs/"$teamnum".txt"
+
 
 clear
 exec $scriptdir/main.sh
